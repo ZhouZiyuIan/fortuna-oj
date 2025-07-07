@@ -95,7 +95,7 @@ inst_env_command = [
         'Install YAUJ from GitHub',
         'mkdir -p /home/judge/src',
         'git clone --depth=1 https://github.com/roastduck/YAUJ /home/judge/src/yauj',
-        '/home/judge/src/yauj/init-env_bionic.sh',
+        '/home/judge/src/yauj/initenv_jammy.sh',
         'cd /home/judge/src/yauj && make',
         'cd /home/judge/src/yauj && make install',
     ],
@@ -179,7 +179,7 @@ execute_command_block([
     'Get fortuna-oj from GitHub',
     'mkdir -p /var/www/' + oj_name,
     'chown www-data:www-data /var/www/' + oj_name,
-    'sudo -u www-data git clone --depth=1 -b %s https://github.com/roastduck/fortuna-oj /var/www/%s' % (oj_branch, oj_name)
+    'sudo -u www-data git clone --depth=1 -b %s https://github.com/ZhouZiyuIan/fortuna-oj-backup /var/www/%s' % (oj_branch, oj_name)
 ])
 
 output_bar("Create local settings")
